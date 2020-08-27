@@ -1,0 +1,3 @@
+void setupDisplay();
+
+void loopDisplay();

@@ -1,0 +1,2 @@
+void setupRotaryButton();
+void loopRotaryButton();
