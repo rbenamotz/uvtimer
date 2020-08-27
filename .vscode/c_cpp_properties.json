@@ -17,7 +17,6 @@
                 "c:/Users/roeybe/Sources/uvtimer/.pio/libdeps/dev/Encoder/utility",
                 "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/variants/standard",
-                "c:/Users/roeybe/Sources/uvtimer/.pio/libdeps/dev/_tmp_installing-1r_ra0r0-package",
                 "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                 "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
@@ -38,7 +37,6 @@
                     "c:/Users/roeybe/Sources/uvtimer/.pio/libdeps/dev/Encoder/utility",
                     "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/variants/standard",
-                    "c:/Users/roeybe/Sources/uvtimer/.pio/libdeps/dev/_tmp_installing-1r_ra0r0-package",
                     "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                     "C:/Users/roeybe/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
@@ -49,6 +47,7 @@
             "defines": [
                 "PLATFORMIO=40304",
                 "ARDUINO_AVR_UNO",
+                "ENV_DEV",
                 "F_CPU=16000000L",
                 "ARDUINO_ARCH_AVR",
                 "ARDUINO=10808",
