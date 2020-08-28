@@ -44,12 +44,12 @@ void loopEncoder()
     }
     if (newPosition < MIN_TIMER_VALUE)
     {
-        myEnc.write(MIN_TIMER_VALUE);
+        myEnc.write(MIN_TIMER_VALUE * ENC_STEPS);
         return;
     }
     if (newPosition > MAX_TIMER_VALUE)
     {
-        myEnc.write(MAX_TIMER_VALUE);
+        myEnc.write(MAX_TIMER_VALUE * ENC_STEPS);
         return;
     }
     if (newPosition == encPosition)
