@@ -43,8 +43,6 @@ void stopTimer()
 {
     digitalWrite(PIN_RELAY, false);
     state = STATE_SETTING;
-    Serial.print("Timer stopped. Writing ");
-    Serial.print(encPosition * 4);
-    Serial.println(" to MyEnc");
+    Serial.print("Timer stopped.");
     isDisplayNeedsUpdate = true;
 }

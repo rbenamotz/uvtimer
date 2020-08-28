@@ -10,7 +10,7 @@
 #define FONT_SIZE 3
 
 
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, 4);
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
 
 String formatInt(unsigned int v)
 {
@@ -68,4 +68,5 @@ void loopDisplay()
     display.print(str);
     display.display();
     isDisplayNeedsUpdate = false;
+    Serial.println(str);
 }

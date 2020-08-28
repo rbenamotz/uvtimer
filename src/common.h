@@ -15,6 +15,13 @@
 #define PIN_STATUS_LED LED_BUILTIN
 #endif
 
+#define EEPROM_ADDR_ENC 0
+#define ENC_STEPS 4
+#define MIN_TIMER_VALUE 1
+#define MAX_TIMER_VALUE 240
+#define DEFAULT_TIMER_VALUE 10
+
+
 extern unsigned long timerStartTime;
 extern unsigned long timerEndTime;
 extern bool isDisplayNeedsUpdate;

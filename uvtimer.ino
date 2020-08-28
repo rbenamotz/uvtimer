@@ -51,9 +51,9 @@ void startTimer() {
 void stopTimer() {
   digitalWrite(PIN_RELAY, false);
   state = STATE_SETTING;
-  myEnc.write(oldPosition * 4);
+  myEnc.write(oldPosition * ENC_STEPS);
   Serial.print("Timer stopped. Writing ");
-  Serial.print(oldPosition * 4);
+  Serial.print(oldPosition * ENC_STEPS);
   Serial.println(" to MyEnc");
   isDisplayNeedsUpdate = true;
 
@@ -102,7 +102,7 @@ void loopEncoder() {
   if (state != STATE_SETTING) {
     return;
   }
-  long newPosition = myEnc.read() / 4;
+  long newPosition = myEnc.read() / ENC_STEPS;
   if (newPosition <0) {
     myEnc.write(0);
     return;
