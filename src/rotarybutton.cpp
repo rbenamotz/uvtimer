@@ -2,7 +2,7 @@
 #include "uvtimer.h"
 #include "common.h"
 #include "Encoder.h"
-Encoder myEnc(PIN_ENC_1, PIN_ENC_2);
+Encoder myEnc(PIN_ENC_2, PIN_ENC_1);
 
 void loopButton()
 {

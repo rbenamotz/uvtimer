@@ -47,7 +47,8 @@ void loopDisplay()
     String str = "";
     if (state == STATE_SETTING)
     {
-        str = formatInt(encPosition) + ":00";
+        str = formatInt(encPosition);
+        str = str + " min";
     }
     if (state == STATE_RUNNING)
     {
