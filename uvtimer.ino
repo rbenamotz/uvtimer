@@ -110,9 +110,6 @@ void loopEncoder() {
   if (newPosition == oldPosition) {
     return;
   }
-  Serial.print("New position: ");
-  Serial.print(newPosition);
-  Serial.println(".");
   oldPosition = newPosition;
   isDisplayNeedsUpdate = true;
 }

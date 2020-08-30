@@ -17,9 +17,6 @@ void loopUvTimer()
     }
     if (millis() >= timerEndTime)
     {
-        Serial.print(millis());
-        Serial.print(" - ");
-        Serial.println(timerEndTime);
         stopTimer();
     }
     unsigned long l = millis() - lastDisplayUpdate;
@@ -36,13 +33,15 @@ void startTimer()
     timerEndTime = timerStartTime + encPosition * 1000 * 60;
     digitalWrite(PIN_RELAY, true);
     state = STATE_RUNNING;
-    Serial.println("Timer started");
+    Serial.print("Timer started at ");
+    Serial.println(millis());
 }
 
 void stopTimer()
 {
     digitalWrite(PIN_RELAY, false);
     state = STATE_SETTING;
-    Serial.print("Timer stopped.");
+    Serial.print("Timer stopped at ");
+    Serial.println(millis());
     isDisplayNeedsUpdate = true;
 }

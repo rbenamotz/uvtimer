@@ -9,7 +9,6 @@
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 #define FONT_SIZE 3
 
-
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
 
 String formatInt(unsigned int v)
@@ -42,13 +41,14 @@ void loopDisplay()
     {
         return;
     }
+    static String lastStr = "";
     display.clearDisplay();
     display.cp437(true); // Use full 256 char 'Code Page 437' font
     String str = "";
     if (state == STATE_SETTING)
     {
         str = formatInt(encPosition);
-        str = str + " min";
+        str = str + ":00";
     }
     if (state == STATE_RUNNING)
     {
@@ -68,5 +68,12 @@ void loopDisplay()
     display.print(str);
     display.display();
     isDisplayNeedsUpdate = false;
-    Serial.println(str);
+#ifdef ENV_DEV
+    str.replace(" ", ":");
+    if (str != lastStr)
+    {
+        Serial.println(str);
+        lastStr = str;
+    }
+#endif
 }

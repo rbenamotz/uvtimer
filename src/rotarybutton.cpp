@@ -56,9 +56,6 @@ void loopEncoder()
     {
         return;
     }
-    Serial.print("New position: ");
-    Serial.print(newPosition);
-    Serial.println(".");
     encPosition = newPosition;
     isDisplayNeedsUpdate = true;
 }
