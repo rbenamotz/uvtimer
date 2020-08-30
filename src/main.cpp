@@ -20,7 +20,8 @@ void loopBlink() {
     static unsigned long lastBlink = 0;
     static bool b = true;
     unsigned long l = millis() - lastBlink;
-    if (l<=500) { 
+    unsigned long delay = state == STATE_RUNNING? 100 : 1000;
+    if (l<=delay) { 
         return;
     }
     digitalWrite(PIN_STATUS_LED,b);
