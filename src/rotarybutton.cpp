@@ -3,8 +3,13 @@
 #include "common.h"
 #include "Encoder.h"
 #include <EEPROM.h>
-Encoder myEnc(PIN_ENC_2, PIN_ENC_1);
 
+
+#ifdef ENV_PROD
+Encoder myEnc(PIN_ENC_1, PIN_ENC_2);
+#else
+Encoder myEnc(PIN_ENC_2, PIN_ENC_1);
+#endif
 void loopButton()
 {
     static unsigned long lastButtonDownEvent = 0;
