@@ -37,6 +37,7 @@ void setupDisplay()
 
 void loopDisplay()
 {
+    static bool b = true;
     if (!isDisplayNeedsUpdate)
     {
         return;
@@ -52,11 +53,9 @@ void loopDisplay()
     }
     if (state == STATE_RUNNING)
     {
-        unsigned long l = timerEndTime - millis();
-        l = l / 1000 + 1;
+        unsigned int l = secondsLeft;
         unsigned int m = l / 60;
         unsigned int s = l - (m * 60);
-        bool b = (millis() % 500) > 250;
         str = formatInt(m);
         str = str + (b ? ":" : " ");
         str = str + formatInt(s);

@@ -22,8 +22,8 @@
 #define DEFAULT_TIMER_VALUE 10
 
 
-extern unsigned long timerStartTime;
-extern unsigned long timerEndTime;
-extern bool isDisplayNeedsUpdate;
+extern volatile unsigned int secondsLeft;
+
+volatile extern bool isDisplayNeedsUpdate;
 extern int state;
 extern long encPosition;
