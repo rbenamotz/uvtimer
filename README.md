@@ -1,5 +1,5 @@
 # uvtimer
-Very simple timer for turning off UV lamp (or any device) after certain amount of time
+Very simple timer for turning onUV lamp (or any device) after certain amount of time
 
 Easy to use timer for contolling curation time of UV light.
 
@@ -17,7 +17,7 @@ BOM
 ## Instructions
 
 ### Assembly
-1.Asseblme the circuit as shown [here](https://easyeda.com/roey/uvtimer)
+1. Asseblme the circuit as shown [here](https://easyeda.com/roey/uvtimer)
 2. Connect relay to (not shown in the diagram)
 3. Connect UV light to the relay (careful! make sure you know what you are doing!)
 4. Compile and load the firmware to ATMega328 and place it in the board
